@@ -9,8 +9,7 @@ import Link from "next/link";
 import { HoveredLink, Menu, MenuItem, ProductItem } from "./ui/navbar-menu";
 import { cn } from "@/lib/utils";
 
-
-const projects = require("@/static/dyno.json");
+import * as projects from "@/static/dyno.json";
 
 export function NavbarDemo() {
   return (
