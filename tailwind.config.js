@@ -15,7 +15,7 @@ module.exports = {
     // Or if using `src` directory:
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  darkMode: "selector",
+  darkMode: "media",
   theme: {
     extend: {
       // your config here
