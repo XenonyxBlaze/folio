@@ -1,0 +1,17 @@
+{
+    "Status": "Unemployed",
+    "Projects": {
+        "Attack-ML":{
+            "img":"static/img/attack-ml.png",
+            "desc":"Intrusion Detection System using Machine Learning"
+        },
+        "Portfolio":{
+            "img":"static/img/portfolio.png",
+            "desc":"You are looking at it right now"
+        },
+        "GULAG":{
+            "img":"static/img/gulag.png",
+            "desc":"MySQL utility but ~GUI~"
+        }
+    }
+}

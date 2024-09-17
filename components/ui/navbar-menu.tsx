@@ -25,10 +25,10 @@ export const MenuItem = ({
   children?: React.ReactNode;
 }) => {
   return (
-    <div onMouseEnter={() => setActive(item)} className="relative ">
+    <div onMouseEnter={() => setActive(item)} className="relative py-[1px]">
       <motion.p
         transition={{ duration: 0.3 }}
-        className="cursor-pointer text-black hover:opacity-[0.9] dark:text-white"
+        className="cursor-pointer text-black hover:text-red-500 dark:text-white"
       >
         {item}
       </motion.p>
@@ -38,7 +38,7 @@ export const MenuItem = ({
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={transition}
         >
-          {active === item && (
+          {active === item && children && (
             <div className="absolute top-[calc(100%_+_1.2rem)] left-1/2 transform -translate-x-1/2 pt-4">
               <motion.div
                 transition={transition}
@@ -70,7 +70,7 @@ export const Menu = ({
   return (
     <nav
       onMouseLeave={() => setActive(null)} // resets the state
-      className="relative rounded-b-full border-b border-red-900 dark:bg-black bg-white shadow-input space-x-6 px-16 py-6 "
+      className="relative rounded-b-full border-b-2 border-red-700 bg-white dark:bg-black shadow-input flex justify-center space-x-6 px-16 py-6 "
     >
       {children}
     </nav>
@@ -89,7 +89,7 @@ export const ProductItem = ({
   src: string;
 }) => {
   return (
-    <Link href={href} className="flex space-x-2">
+    <Link href={href} className="flex space-x-2 text-black dark:text-white hover:text-red-500"  target="_blank" rel="noopener noreferrer">
       <Image
         src={src}
         width={140}
@@ -98,10 +98,10 @@ export const ProductItem = ({
         className="flex-shrink-0 rounded-md shadow-2xl"
       />
       <div>
-        <h4 className="text-xl font-bold mb-1 text-black dark:text-white">
+        <h4 className="text-xl font-bold mb-1">
           {title}
         </h4>
-        <p className="text-neutral-700 text-sm max-w-[10rem] dark:text-neutral-300">
+        <p className="text-sm max-w-[10rem]">
           {description}
         </p>
       </div>
@@ -111,12 +111,14 @@ export const ProductItem = ({
 
 export const HoveredLink = ({ children, ...rest }: {
   children: React.ReactNode;
-  [key: string]: any;
+  href: string;
 }) => {
   return (
     <Link
       {...rest}
       className="text-neutral-700 dark:text-neutral-200 hover:text-red-500 "
+      target="_blank"
+      rel="noopener noreferrer"
     >
       {children}
     </Link>
