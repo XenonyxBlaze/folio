@@ -1,8 +1,10 @@
 "use client";
+import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import { HeroHighlight, Highlight } from "./ui/hero-highlight";
+// import '@/static/js/agescript.js';
 
-export function HeroHighlightDemo() {
+export function HeroHighlightDemo({ unfont }: { unfont: string }) {
   return (
     <HeroHighlight>
       <motion.h1
@@ -18,15 +20,14 @@ export function HeroHighlightDemo() {
           duration: 0.5,
           ease: [0.4, 0.0, 0.2, 1],
         }}
-        className="text-2xl px-4 md:text-4xl lg:text-5xl font-bold text-red-700 max-w-4xl leading-relaxed lg:leading-snug text-right mx-auto "
+        className={cn("text-4xl lg:text-8xl md:text-6xl sm:text-4xl ",unfont," font-bold text-red dark:text-red-500 max-w-4xl leading-relaxed lg:leading-snug text-left mx-auto")}
       >
-        With insomnia, nothing's real. Everything is far away. Everything
-        is a{" "}
-        <br /><br />
-        <Highlight className="text-black dark:text-white">
-          copy, of a copy, of a copy.
+        X e n o n y x <br />
+        <Highlight className="text-xl lg:text-4xl md:text-2xl sm:text-xl text-white dark:text-black">
+          Developer
         </Highlight>
       </motion.h1>
+      
     </HeroHighlight>
   );
 }

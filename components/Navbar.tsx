@@ -9,6 +9,9 @@ import Link from "next/link";
 import { HoveredLink, Menu, MenuItem, ProductItem } from "./ui/navbar-menu";
 import { cn } from "@/lib/utils";
 
+
+const projects = require("@/static/dyno.json");
+
 export function NavbarDemo() {
   return (
     <div className="relative w-full flex">
@@ -52,24 +55,15 @@ function Navbar({ className }: { className?: string }) {
 
         <MenuItem setActive={setActive} active={active} item="Projects">
           <div className=" text-sm grid grid-cols-1 gap-10 p-4">
-            <ProductItem
-              title="Attack-ML"
-              href="https://github.com/oatkrs/attack-ml"
-              src="https://assets.aceternity.com/demos/algochurn.webp"
-              description="Intrusion Detection System using Machine Learning"
-            />
-            <ProductItem
-              title="Portfolio"
-              href="https://github.com/XenonyxBlaze/folio"
-              src="https://assets.aceternity.com/demos/tailwindmasterkit.webp"
-              description="You are looking at it right now"
-            />
-            <ProductItem
-              title="GULAG 2.0"
-              href="https://github.com/XenonyxBlaze/GULAG_2.0"
-              src="https://assets.aceternity.com/demos/Screenshot+2024-02-21+at+11.51.31%E2%80%AFPM.png"
-              description="MySQL but ~GUI~"
-            />
+            {projects.Projects.map((project: any) => (
+              <ProductItem
+                key={project.title}
+                title={project.title}
+                description={project.desc}
+                src={project.img}
+                href={project.link}
+              />
+            ))}
           </div>
         </MenuItem>
         <MenuItem setActive={setActive} active={active} item="Contact Me">

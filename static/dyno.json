@@ -1,17 +1,23 @@
 {
     "Status": "Unemployed",
-    "Projects": {
-        "Attack-ML":{
-            "img":"static/img/attack-ml.png",
-            "desc":"Intrusion Detection System using Machine Learning"
+    "Projects": [
+        {
+            "title":"Attack-ML",
+            "img":"/static/img/attack-ml.png",
+            "desc":"Intrusion Detection System using Machine Learning",
+            "link":"https://github.com/oatkrs/attack-ml"
         },
-        "Portfolio":{
-            "img":"static/img/portfolio.png",
-            "desc":"You are looking at it right now"
+        {
+            "title":"Portfolio",
+            "img":"",
+            "desc":"You are looking at it right now",
+            "link":"https://github.com/XenonyxBlaze/folio"
         },
-        "GULAG":{
-            "img":"static/img/gulag.png",
-            "desc":"MySQL utility but ~GUI~"
+        {
+            "title":"GULAG",
+            "img":"",
+            "desc":"MySQL utility but ~GUI~",
+            "link":"https://github.com/XenonyxBlaze/GULAG_2.0"
         }
-    }
+    ]
 }

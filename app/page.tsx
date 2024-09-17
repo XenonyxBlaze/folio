@@ -1,10 +1,16 @@
 import {HeroHighlightDemo} from "../components/Hero";
-import {ThreeScene} from "../components/spotlight";
+
+import localFont from "next/font/local";
+
+const techhno = localFont({
+  src: "./fonts/TCFont.otf",
+  variable: "--font-techhno",
+});
 
 export default function Home() {
   return (
     <div>
-      <HeroHighlightDemo />
+      <HeroHighlightDemo unfont={`${techhno.className}`} />
     </div>
   );
 }
