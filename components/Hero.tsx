@@ -20,9 +20,11 @@ export function HeroHighlightDemo({ unfont }: { unfont: string }) {
           duration: 0.5,
           ease: [0.4, 0.0, 0.2, 1],
         }}
-        className={cn("text-4xl lg:text-8xl md:text-6xl sm:text-4xl ",unfont," font-bold text-red-800 dark:text-red-500 max-w-4xl leading-relaxed lg:leading-snug text-left mx-auto")}
+        className={cn(unfont," font-bold text-red-800 dark:text-red-500 max-w-4xl leading-relaxed lg:leading-snug text-left mx-auto")}
       >
-        X e n o n y x <br />
+        <span className="text-4xl lg:text-8xl md:text-6xl sm:text-4xl ">
+          X e n o n y x
+        </span><br />
         <Highlight className="text-xl lg:text-4xl md:text-2xl sm:text-xl text-white dark:text-black">
           Developer
         </Highlight>
