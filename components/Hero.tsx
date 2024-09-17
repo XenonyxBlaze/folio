@@ -2,7 +2,10 @@
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import { HeroHighlight, Highlight } from "./ui/hero-highlight";
+import { FlipWords } from "./ui/flip-words";
 // import '@/static/js/agescript.js';
+
+const words = ["X e n o n y x","Aarav Rajput"]
 
 export function HeroHighlightDemo({ unfont }: { unfont: string }) {
   return (
@@ -23,7 +26,7 @@ export function HeroHighlightDemo({ unfont }: { unfont: string }) {
         className={cn(unfont," font-bold text-red-800 dark:text-red-500 max-w-4xl leading-relaxed lg:leading-snug text-left mx-auto")}
       >
         <span className="text-4xl lg:text-8xl md:text-6xl sm:text-4xl ">
-          X e n o n y x
+          <FlipWords words={words} /> <br />
         </span><br />
         <Highlight className="text-xl lg:text-4xl md:text-2xl sm:text-xl text-white dark:text-black">
           Developer

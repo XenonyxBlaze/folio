@@ -49,10 +49,10 @@ function Navbar({ className }: { className?: string }) {
           rel="noopener noreferrer"
           onMouseEnter={() => setActive(null)}
         >
-          <button className="relative inline-flex overflow-hidden rounded-full py-[1px] px-[4px]">
-            <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite]
+          <button className="relative inline-flex overflow-hidden rounded-full py-[2px] px-[4px] ">
+            <span className="absolute inset-[-1000%] animate-[spin_1s_linear_infinite]
             bg-[conic-gradient(from_90deg_at_50%_50%,#7F1D1D_0%,#4c1d95_50%,#7F1D1D_100%)] 
-            dark:bg-[conic-gradient(from_90deg_at_50%_50%,#FF4444_0%,#cf3df7_50%,#ff4444_100%)]"/>
+            dark:bg-[conic-gradient(from_90deg_at_50%_50%,#ef4444_0%,#6366f1_50%,#ef4444_100%)]"/>
             <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-white dark:bg-black px-3 py-1 text-sm font-medium text-black dark:text-white hover:text-red-500 backdrop-blur-3xl">
               Download CV
             </span>
