@@ -9,6 +9,13 @@ import Link from "next/link";
 import { HoveredLink, Menu, MenuItem, ProductItem } from "./ui/navbar-menu";
 import { cn } from "@/lib/utils";
 
+type Project = {
+  title: string;
+  desc: string;
+  img: string;
+  link: string;
+};
+
 import * as projects from "@/static/dyno.json";
 
 export function NavbarDemo() {
@@ -54,7 +61,7 @@ function Navbar({ className }: { className?: string }) {
 
         <MenuItem setActive={setActive} active={active} item="Projects">
           <div className=" text-sm grid grid-cols-1 gap-10 p-4">
-            {projects.Projects.map((project: any) => (
+            {projects.Projects.map((project: Project) => (
               <ProductItem
                 key={project.title}
                 title={project.title}
