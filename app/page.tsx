@@ -1,4 +1,5 @@
 import {HeroHighlightDemo} from "../components/Hero";
+import {Spotlight} from "../components/Spotlight";
 
 import localFont from "next/font/local";
 
@@ -12,6 +13,8 @@ export default function Home() {
     <div>
       <HeroHighlightDemo unfont={`${techhno.className}`} />
       <hr className="border-red-500" />
+      <Spotlight></Spotlight>
+      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
     </div>
   );
 }

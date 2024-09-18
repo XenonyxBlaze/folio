@@ -9,13 +9,13 @@
         },
         {
             "title":"Portfolio",
-            "img":"",
+            "img":"/static/img/portfolio.png",
             "desc":"You are looking at it right now",
             "link":"https://github.com/XenonyxBlaze/folio"
         },
         {
             "title":"GULAG",
-            "img":"",
+            "img":"/static/img/gulag.png",
             "desc":"MySQL utility but ~GUI~",
             "link":"https://github.com/XenonyxBlaze/GULAG_2.0"
         }
