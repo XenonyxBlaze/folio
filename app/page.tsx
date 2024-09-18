@@ -1,5 +1,5 @@
-import {HeroHighlightDemo} from "../components/Hero";
-import {Spotlight} from "../components/Spotlight";
+import {HeroHighlightDemo} from "@/components/Hero";
+import {Spotlight} from "@/components/Spotlight";
 
 import localFont from "next/font/local";
 
