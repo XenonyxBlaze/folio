@@ -16,7 +16,9 @@ type Project = {
   link: string;
 };
 
-import * as projects from "@/static/dyno.json";
+import data from "@/static/dyno.json";
+
+const projectsList = data.Projects;
 
 export function NavbarDemo() {
   return (
@@ -49,7 +51,7 @@ function Navbar({ className }: { className?: string }) {
           rel="noopener noreferrer"
           onMouseEnter={() => setActive(null)}
         >
-          <button className="relative inline-flex overflow-hidden rounded-full py-[2px] px-[4px] ">
+          <button className="relative inline-flex overflow-hidden rounded-full py-[2px] px-[4px]">
             <span className="absolute inset-[-1000%] animate-[spin_1s_linear_infinite]
             bg-[conic-gradient(from_90deg_at_50%_50%,#7F1D1D_0%,#4c1d95_50%,#7F1D1D_100%)] 
             dark:bg-[conic-gradient(from_90deg_at_50%_50%,#ef4444_0%,#6366f1_50%,#ef4444_100%)]"/>
@@ -61,7 +63,7 @@ function Navbar({ className }: { className?: string }) {
 
         <MenuItem setActive={setActive} active={active} item="Projects">
           <div className=" text-sm grid grid-cols-1 gap-10 p-4">
-            {projects.Projects.map((project: Project) => (
+            {projectsList.map((project: Project) => (
               <ProductItem
                 key={project.title}
                 title={project.title}

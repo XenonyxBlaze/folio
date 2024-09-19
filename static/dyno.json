@@ -1,5 +1,11 @@
 {
-    "Status": "Available for work",
+    "Status": {
+        "work":false,
+        "role":"Team Lead",
+        "company":"Data Science Club, VIT Bhopal",
+        "link":"https://www.linkedin.com/posts/aaravrajput_datascience-vitbhopai-vitbhopailions-activity-7062843531773526016-q6Bo",
+        "img":"/static/img/beggar.png"
+    },
     "Projects": [
         {
             "title":"Attack-ML",

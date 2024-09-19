@@ -12,8 +12,9 @@ export default function Home() {
   return (
     <div>
       <HeroHighlightDemo unfont={`${techhno.className}`} />
-      <hr className="border-red-500" />
+      <hr className="border-red-700" />
       <Spotlight></Spotlight>
+      <hr className="border-red-700" />
     </div>
   );
 }

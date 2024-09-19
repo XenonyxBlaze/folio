@@ -1,13 +1,36 @@
+import React from "react";
+// import { motion } from "framer-motion";
 import { Aging } from "./ui/aging";
-import { StatusText } from "./ui/statustext";
+import { LinkPreview } from "./ui/link-preview";
+import { ShootingStars } from "./ui/shooting-stars";
+
+// import { cn } from "@/lib/utils";
+
+import data from "@/static/dyno.json";
+const status = data.Status;
 
 export const Spotlight = () => {
-    return (
-        <div className="text-center text-xl lg:text-3xl md:text-2xl sm:text-xl items-center h-[40rem] flex flex-col gap-y-3 justify-center">
-            <Aging />
-            <h1>
-                Currently: {"{ "}<StatusText />{" }"}
-            </h1>
-        </div>
-    );
-}
+  return (
+    <div className="text-center text-xl lg:text-3xl md:text-2xl sm:text-xl items-center h-[20rem] flex flex-col gap-y-3 justify-center relative">
+      <Aging />
+      <h1>
+        Currently:
+        <span className="text-purple-700 font-bold ">
+          {" { "}
+          <LinkPreview
+            className="text-red-500 font-bold underline"
+            isStatic={!status.work}
+            url={status.work ? status.link : "#"}
+            imageSrc={!status.work ? status.img : ""}
+          >
+            {status.work
+              ? status.role + " at " + status.company
+              : "Available for work"}
+          </LinkPreview>
+          {" }"}
+        </span>
+      </h1>
+      <ShootingStars /> 
+    </div>
+  );
+};
