@@ -14,7 +14,6 @@ export default function Home() {
       <HeroHighlightDemo unfont={`${techhno.className}`} />
       <hr className="border-red-500" />
       <Spotlight></Spotlight>
-      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
     </div>
   );
 }

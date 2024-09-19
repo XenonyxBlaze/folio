@@ -12,6 +12,7 @@ export const Cover = ({
   children?: React.ReactNode;
   className?: string;
 }) => {
+
   const [hovered, setHovered] = useState(false);
 
   const ref = useRef<HTMLDivElement>(null);
@@ -31,14 +32,18 @@ export const Cover = ({
       );
       setBeamPositions(positions);
     }
-  }, []);
+  }, [ref.current]);
 
   return (
     <div
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
+      onMouseEnter={() => {setHovered(true);
+        setContainerWidth(184);
+      }}
+      onMouseLeave={() => {setHovered(false);
+        setContainerWidth(48);
+      }}
       ref={ref}
-      className="relative hover:bg-neutral-900  group/cover inline-block dark:bg-neutral-900 bg-neutral-100 px-2 py-2  transition duration-200 rounded-sm"
+      className="relative group/cover border-[0.01px] border-red-900 inline-block dark:bg-neutral-950 bg-neutral-100 px-2 py-2 mx-2 transition duration-200 rounded-sm"
     >
       <AnimatePresence>
         {hovered && (
@@ -70,17 +75,17 @@ export const Cover = ({
                 background="transparent"
                 minSize={0.4}
                 maxSize={1}
-                particleDensity={500}
+                particleDensity={100}
                 className="w-full h-full"
-                particleColor="#FFFFFF"
+                particleColor="#ffff00"
               />
               <SparklesCore
                 background="transparent"
                 minSize={0.4}
                 maxSize={1}
-                particleDensity={500}
+                particleDensity={100}
                 className="w-full h-full"
-                particleColor="#FFFFFF"
+                particleColor="#ffff00"
               />
             </motion.div>
           </motion.div>
@@ -102,8 +107,8 @@ export const Cover = ({
         key={String(hovered)}
         animate={{
           scale: hovered ? 0.8 : 1,
-          x: hovered ? [0, -30, 30, -30, 30, 0] : 0,
-          y: hovered ? [0, 30, -30, 30, -30, 0] : 0,
+          x: hovered ? [0, -10, 10, -10, 10, 0] : 0,
+          y: hovered ? [0, 10, -10, 10, -10, 0] : 0,
         }}
         exit={{
           filter: "none",
@@ -131,16 +136,16 @@ export const Cover = ({
           },
         }}
         className={cn(
-          "dark:text-white inline-block text-neutral-900 relative z-20 group-hover/cover:text-white transition duration-200",
+          "dark:text-white inline-block text-neutral-900 relative z-20 group-hover/cover:text-red-500 transition duration-200",
           className
         )}
       >
         {children}
       </motion.span>
-      <CircleIcon className="absolute -right-[2px] -top-[2px]" />
-      <CircleIcon className="absolute -bottom-[2px] -right-[2px]" delay={0.4} />
-      <CircleIcon className="absolute -left-[2px] -top-[2px]" delay={0.8} />
-      <CircleIcon className="absolute -bottom-[2px] -left-[2px]" delay={1.6} />
+      <CircleIcon className="absolute -right-[5px] -top-[5px]" />
+      <CircleIcon className="absolute -bottom-[5px] -right-[5px]" delay={0.4} />
+      <CircleIcon className="absolute -left-[5px] -top-[5px]" delay={0.8} />
+      <CircleIcon className="absolute -bottom-[5px] -left-[5px]" delay={1.6} />
     </div>
   );
 };
@@ -150,7 +155,7 @@ export const Beam = ({
   delay,
   duration,
   hovered,
-  width = 600,
+  width,
   ...svgProps
 }: {
   className?: string;
@@ -164,15 +169,15 @@ export const Beam = ({
   return (
     <motion.svg
       width={width ?? "600"}
-      height="1"
-      viewBox={`0 0 ${width ?? "600"} 1`}
+      height="5"
+      viewBox={`0 0 ${width ?? "600"} 5`}
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={cn("absolute inset-x-0 w-full", className)}
       {...svgProps}
     >
       <motion.path
-        d={`M0 0.5H${width ?? "600"}`}
+        d={`M0 1H${width ?? "600"}`}
         stroke={`url(#svgGradient-${id})`}
       />
 
@@ -201,9 +206,9 @@ export const Beam = ({
             repeatDelay: hovered ? Math.random() * (2 - 1) + 1 : delay ?? 1,
           }}
         >
-          <stop stopColor="#2EB9DF" stopOpacity="0" />
-          <stop stopColor="#3b82f6" />
-          <stop offset="1" stopColor="#3b82f6" stopOpacity="0" />
+          <stop stopColor="#009dff" stopOpacity="0" />
+          <stop stopColor="#7569ff" />
+          <stop offset="1" stopColor="#7569ff" stopOpacity="0" />
         </motion.linearGradient>
       </defs>
     </motion.svg>
@@ -219,9 +224,10 @@ export const CircleIcon = ({
   return (
     <div
       className={cn(
-        `pointer-events-none animate-pulse group-hover/cover:hidden group-hover/cover:opacity-100 group h-2 w-2 rounded-full bg-neutral-600 dark:bg-white opacity-20 group-hover/cover:bg-white`,
+        `pointer-events-none animate-pulse h-2 w-2 rounded-full bg-neutral-600 dark:bg-red-900 opacity-20`,
         className
-      )}
-    ></div>
+      )}>
+        
+    </div>
   );
 };
