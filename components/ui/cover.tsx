@@ -224,7 +224,7 @@ export const CircleIcon = ({
   return (
     <div
       className={cn(
-        `pointer-events-none animate-pulse h-2 w-2 rounded-full bg-neutral-600 dark:bg-red-900 opacity-20`,
+        `pointer-events-none animate-pulse h-2 w-2 rounded-full bg-red-500 dark:bg-red-900 opacity-20`,
         className
       )}>
         

@@ -2,7 +2,6 @@ import React from "react";
 // import { motion } from "framer-motion";
 import { Aging } from "./ui/aging";
 import { LinkPreview } from "./ui/link-preview";
-import { ShootingStars } from "./ui/shooting-stars";
 
 // import { cn } from "@/lib/utils";
 
@@ -11,7 +10,7 @@ const status = data.Status;
 
 export const Spotlight = () => {
   return (
-    <div className="text-center text-xl lg:text-3xl md:text-2xl sm:text-xl items-center h-[20rem] flex flex-col gap-y-3 justify-center relative">
+    <div className="text-center text-xl lg:text-3xl md:text-2xl sm:text-xl items-center h-[15rem] flex flex-col gap-y-3 justify-center relative border-y-[1px] border-red-900">
       <Aging />
       <h1>
         Currently:
@@ -30,7 +29,6 @@ export const Spotlight = () => {
           {" }"}
         </span>
       </h1>
-      <ShootingStars /> 
     </div>
   );
 };
