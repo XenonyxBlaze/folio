@@ -144,7 +144,7 @@ export const LinkPreview = ({
                     quality={quality}
                     layout={layout}
                     priority={true}
-                    className="rounded-lg"
+                    className="rounded-lg z-[50]"
                     alt="preview image"
                   />
                 </Link>

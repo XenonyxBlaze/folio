@@ -31,7 +31,7 @@ export function NavbarDemo() {
 function Navbar({ className }: { className?: string }) {
   const [active, setActive] = useState<string | null>(null);
   return (
-    <div className={cn("fixed top-10 inset-x-0 mx-auto z-50", className)}>
+    <div className={cn("relative w-full z-50", className)}>
       <Menu setActive={setActive}>
         <Link href="/" className="py-[1px]">
           <MenuItem
@@ -45,6 +45,7 @@ function Navbar({ className }: { className?: string }) {
           
         </div>
         <Link
+          id="hire-me"
           className=""
           href="/static/Aarav_CV.pdf"
           target="_blank"

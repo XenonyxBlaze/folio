@@ -19,7 +19,7 @@ export const Spotlight = () => {
           <LinkPreview
             className="text-red-500 font-bold underline"
             isStatic={!status.work}
-            url={status.work ? status.link : "#"}
+            url={status.work ? status.link : "#hire-me"}
             imageSrc={!status.work ? status.img : ""}
           >
             {status.work
