@@ -22,7 +22,7 @@ const projectsList = data.Projects;
 
 export function NavbarDemo() {
   return (
-    <div className="relative w-full flex">
+    <div className="relative w-full flex z-[1000]">
       <Navbar className="top-0" />
     </div>
   );

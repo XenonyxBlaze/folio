@@ -19,7 +19,8 @@ module.exports = {
   theme: {
     extend: {
       "animation": {
-        shimmer: "shimmer 4s linear infinite"
+        shimmer: "shimmer 4s linear infinite",
+        cardAnim: "cardAnim 44s infinite linear"
       },
       "keyframes": {
         shimmer: {
@@ -28,6 +29,14 @@ module.exports = {
           },
           to: {
             "backgroundPosition": "-200% 0"
+          }
+        },
+        cardAnim: {
+          from: {
+            "backgroundPosition": "0% 0%"
+          },
+          to: {
+            "backgroundPosition": "-100% -100%"
           }
         }
       }
