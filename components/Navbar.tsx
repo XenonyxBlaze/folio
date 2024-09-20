@@ -33,9 +33,9 @@ function Navbar({ className }: { className?: string }) {
 
   const [isDark, setIsDark] = useState(true);
 
-  const isDarkMode = () => {
-    return window.matchMedia("(prefers-color-scheme: dark)").matches;
-  };
+  // const isDarkMode = () => {
+  //   return window.matchMedia("(prefers-color-scheme: dark)").matches;
+  // };
 
   const darkModeHandler = () => {
     document.documentElement.classList.toggle("dark");
