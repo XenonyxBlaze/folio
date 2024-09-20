@@ -43,7 +43,7 @@ export const Cover = ({
         setContainerWidth(48);
       }}
       ref={ref}
-      className="relative group/cover border-[0.01px] border-red-700 inline-block dark:bg-neutral-950 bg-neutral-100 px-2 py-2 mx-2 transition duration-200 rounded-lg"
+      className="relative group/cover border-[0.01px] border-red-700 inline-block px-2 py-2 mx-2 transition duration-200 rounded-lg hover:bg-[#dbc1c8] dark:hover:bg-neutral-950"
     >
       <AnimatePresence>
         {hovered && (
