@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope, faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 import Link from "next/link";
@@ -30,6 +30,11 @@ export function NavbarDemo() {
 
 function Navbar({ className }: { className?: string }) {
   const [active, setActive] = useState<string | null>(null);
+
+  const darkModeHandler = () => {
+    document.documentElement.classList.toggle("dark");
+  }
+
   return (
     <div className={cn("relative w-full z-50", className)}>
       <Menu setActive={setActive}>
@@ -39,7 +44,11 @@ function Navbar({ className }: { className?: string }) {
             active={active}
             item="Home"
           ></MenuItem>
+      
         </Link>
+        <button className="inline-flex px-2 py-1 animate-shimmer items-center justify-center rounded-full border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] font-medium text-slate-400 transition-colors " onClick={darkModeHandler}>
+          <FontAwesomeIcon icon={faMoon} />
+        </button>
 
         <div className="grow">
           
