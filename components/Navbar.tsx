@@ -53,13 +53,11 @@ function Navbar({ className }: { className?: string }) {
           ></MenuItem>
       
         </Link>
-        <button id="togle" className="inline-flex px-2 py-1 animate-shimmer items-center justify-center rounded-full border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] font-medium text-slate-400 transition-colors " onClick={darkModeHandler}>
+        <button id="togle" className="inline-flex px-4 py-1 items-center justify-center rounded-full border border-red-900 text-red-700 dark:text-red-500 " onClick={darkModeHandler}>
           <FontAwesomeIcon icon={isDark ? faSun : faMoon} />
         </button>
 
-        <div className="grow">
-          
-        </div>
+        <div className="grow" />
         <Link
           id="hire-me"
           className=""

@@ -10,7 +10,7 @@ const status = data.Status;
 
 export const Spotlight = () => {
   return (
-    <div className="text-center text-xl lg:text-3xl md:text-2xl sm:text-xl items-center h-[10rem] flex flex-col gap-y-3 justify-center relative border-y-[1px] border-red-900">
+    <div className="text-center text-xl lg:text-3xl md:text-2xl sm:text-xl items-center h-[10rem] flex flex-col gap-y-3 justify-center relative border-y-[1px] border-red-900 animate-shimmer bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%]">
       <Aging />
       <h1>
         Currently:
