@@ -1,4 +1,6 @@
 import { cn } from "@/lib/utils";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faDiamond, faHeart } from "@fortawesome/free-solid-svg-icons";
 
 const Card = (
     {
@@ -10,18 +12,20 @@ const Card = (
     }) => {
 
     
-    const cardStyle = "absolute z-[-1] w-[100%] h-[100%] bg-[size:100%_29px] bg-[linear-gradient(var(--red-800),var(--red-800)1px,var(--red-950)1px,var(--red-950)28px)] animate-cardAnim overflow-hidden rounded-lg opacity-[0.5]";
+    const cardStyle = "absolute z-[-2] w-[100%] h-[100%] bg-[size:100%_29px] bg-[linear-gradient(var(--red-800),var(--red-800)1px,var(--red-950)1px,var(--red-950)28px)] animate-cardAnim overflow-hidden rounded-lg opacity-[0.5]";
 
     return (
         <div className={cn("absolute w-[18%] aspect-[10/16] border-red-500 border rounded rounded-lg text-red-400 flex flex-col",posArg)}>
             <div className={cn("",cardStyle)}/>
 
-            <div className="basis-1/2 flex justify-start items-start p-4">
+            <div className="basis-1/2 flex justify-start items-start p-4 gap-x-4">
                 {cardType}
+                <FontAwesomeIcon icon={cardType=="J"?faDiamond:faHeart}></FontAwesomeIcon>
             </div>
             
-            <div className="basis-1/2 flex justify-start items-start p-4 rotate-180">
+            <div className="basis-1/2 flex justify-start items-start p-4 rotate-180 gap-x-4">
                 {cardType}
+                <FontAwesomeIcon icon={cardType=="J"?faDiamond:faHeart}></FontAwesomeIcon>
             </div>
 
         </div>
@@ -51,9 +55,9 @@ export const Toolbox = ({ unfont }: { unfont: string }) => {
             
             <div className="flex grow-1 h-full w-full lg:flex-row md:flex-row sm:flex-col flex-col">
                 
-                <div className="basis-2/5 h-full justify-center hidden dark:flex items-center">
-                    <Card posArg="-translate-x-24 translate-y-10 rotate-[-9deg]" cardType="J" />
-                    <Card posArg="translate-x-16 -translate-y-6 rotate-[195deg]" cardType="A" />
+                <div className={cn("basis-2/5 h-full justify-center hidden dark:flex items-center",unfont)}>
+                    <Card posArg="-translate-x-10 sm:-translate-x-10 md:-translate-x-24 lg:-translate-x-24 translate-y-10 rotate-[-9deg]" cardType="J" />
+                    <Card posArg="translate-x-10 sm:translate-x-10 md:translate-x-16 lg:translate-x-16 -translate-y-6 rotate-[195deg]" cardType="A" />
                 </div>
                 
                 
