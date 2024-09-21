@@ -13,7 +13,7 @@ const Card = (
     const cardStyle = "absolute z-[-1] w-[100%] h-[100%] bg-[size:100%_29px] bg-[linear-gradient(var(--red-800),var(--red-800)1px,var(--red-950)1px,var(--red-950)28px)] animate-cardAnim overflow-hidden rounded-lg opacity-[0.5]";
 
     return (
-        <div className={cn("absolute h-[20rem] w-[15rem] border-red-500 border rounded rounded-lg text-red-400 flex flex-col",posArg)}>
+        <div className={cn("absolute w-[18%] aspect-[10/16] border-red-500 border rounded rounded-lg text-red-400 flex flex-col",posArg)}>
             <div className={cn("",cardStyle)}/>
 
             <div className="basis-1/2 flex justify-start items-start p-4">
@@ -40,25 +40,25 @@ export const Toolbox = ({ unfont }: { unfont: string }) => {
             
             <div className="flex grow-0 w-full h-[15rem] flex-col sm:flex-col md:flex-col lg:flex-row">
 
-                <div className="flex justify-center items-center lg:justify-end justify-center items-center lg:items-start h-full w-full basis-1/2">
+                <div className="flex justify-center items-center lg:justify-end justify-center items-end lg:items-start h-full w-full basis-1/2">
                     <h1 className="">A <span className={jacef}>JACK</span> of all <span className="dark:text-purple-700">[a lot]</span></h1>
                 </div>
 
-                <div className="flex justify-center items-center lg:justify-start justify-center items-center lg:items-center h-full w-full basis-1/2">
+                <div className="flex justify-center items-center lg:justify-start justify-center items-start lg:items-center h-full w-full basis-1/2">
                     <h1 className="">Aspiring to <span className={jacef}>MASTER</span> some </h1>
                 </div>
             </div>
             
             <div className="flex grow-1 h-full w-full lg:flex-row md:flex-row sm:flex-col flex-col">
                 
-                <div className="basis-2/5 h-full justify-center hidden dark:lg:flex items-center">
-                    <Card posArg="-translate-x-24 translate-y-10 rotate-[-9deg]" cardType="J"/>
-                    <Card posArg="translate-x-16 -translate-y-6 rotate-[195deg]" cardType="A"/>
+                <div className="basis-2/5 h-full justify-center hidden dark:flex items-center">
+                    <Card posArg="-translate-x-24 translate-y-10 rotate-[-9deg]" cardType="J" />
+                    <Card posArg="translate-x-16 -translate-y-6 rotate-[195deg]" cardType="A" />
                 </div>
                 
                 
-                <div className="flex basis-3/5 grow h-full justify-center pt-5">
-                    <h1>Here are some technologies I am familiar with</h1>
+                <div className="flex basis-3/5 grow h-full justify-center dark:justify-start text-xl pt-5">
+                    <h1>Highly versatile skillset with experience in a wide variety of technologies </h1>
                 </div>
             </div>
         </div>

@@ -18,7 +18,7 @@ export const Spotlight = () => {
         <span className="text-purple-700 font-bold ">
           {" { "}
           <LinkPreview
-            className="text-red-500 font-bold underline"
+            className="text-red-700 dark:text-red-500 font-bold underline"
             isStatic={!status.work}
             url={status.work ? status.link : "#hire-me"}
             imageSrc={!status.work ? status.img : ""}
