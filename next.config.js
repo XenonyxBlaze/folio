@@ -6,6 +6,10 @@ module.exports = {
         protocol: 'https',
         hostname: 'api.microlink.io',
       },
+      {
+        protocol: 'https',
+        hostname: 'assets.aceternity.com',
+      }
     ],
   },
     

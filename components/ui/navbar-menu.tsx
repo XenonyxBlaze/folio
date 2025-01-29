@@ -19,14 +19,16 @@ export const MenuItem = ({
   active,
   item,
   children,
+  className
 }: {
   setActive: (item: string) => void;
   active: string | null;
   item: string;
   children?: React.ReactNode;
+  className?: string;
 }) => {
   return (
-    <div onMouseEnter={() => setActive(item)} className="relative py-[2px]">
+    <div onMouseEnter={() => setActive(item)} className={cn("relative py-[2px]", className)}>
       <motion.p
         transition={{ duration: 0.3 }}
         className="cursor-pointer text-black hover:text-red-500 dark:text-white text-center"

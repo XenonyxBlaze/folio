@@ -9,6 +9,7 @@ import Link from "next/link";
 import { HoveredLink, Menu, MenuItem, ProductItem } from "./ui/navbar-menu";
 import { cn } from "@/lib/utils";
 
+
 type Project = {
   title: string;
   desc: string;
@@ -76,7 +77,7 @@ function Navbar({ className }: { className?: string }) {
           </button>
         </Link>
 
-        <MenuItem setActive={setActive} active={active} item="Projects">
+        <MenuItem className="sm:hidden hidden lg:block md:block" setActive={setActive} active={active} item="Projects">
           <div className=" text-sm grid grid-cols-1 gap-10 p-4">
             {projectsList.map((project: Project) => (
               <ProductItem
@@ -89,7 +90,7 @@ function Navbar({ className }: { className?: string }) {
             ))}
           </div>
         </MenuItem>
-        <MenuItem setActive={setActive} active={active} item="Contact Me">
+        <MenuItem setActive={setActive} active={active} item="Contact Me" className="hidden sm:hidden lg:block md:block">
           <div className="flex flex-col space-y-4 text-sm">
             <HoveredLink href="mailto:aarav.rajput2003@gmail.com">
               <FontAwesomeIcon icon={faEnvelope} /> Drop a mail
