@@ -33,7 +33,6 @@ import {
     IconBrandGit,
     IconBrandGithub,
     IconBrandDocker,
-    IconBrandNpm,
     
     IconBrandAdobePhotoshop,
     IconBrandBlender,
@@ -56,7 +55,7 @@ import {
   } from "@tabler/icons-react";
 
 import { FloatingDock } from "@/components/ui/floating-dock";
-import { title } from "process";
+// import { title } from "process";
 
 const Card = (
     {

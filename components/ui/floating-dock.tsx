@@ -97,50 +97,50 @@ function IconContainer({
   icon: React.ReactNode;
   href: string;
 }) {
-  let ref = useRef<HTMLDivElement>(null);
+  const ref = useRef<HTMLDivElement>(null);
 
   // Calculate the distance from the mouse to the center of the icon container in both x and y directions
-  let distanceX = useTransform(mouseX, (val) => {
-    let bounds = ref.current?.getBoundingClientRect() ?? { x: 0, width: 0 };
+  const distanceX = useTransform(mouseX, (val) => {
+    const bounds = ref.current?.getBoundingClientRect() ?? { x: 0, width: 0 };
     return val - bounds.x - bounds.width / 2;
   });
 
-  let distanceY = useTransform(mouseY, (val) => {
-    let bounds = ref.current?.getBoundingClientRect() ?? { y: 0, height: 0 };
+  const distanceY = useTransform(mouseY, (val) => {
+    const bounds = ref.current?.getBoundingClientRect() ?? { y: 0, height: 0 };
     return val - bounds.y - bounds.height / 2;
   });
 
   // Combine x and y distances to calculate the Euclidean distance (distance from mouse to icon center)
-  let distance = useTransform([distanceX, distanceY], ([x, y]) => {
+  const distance = useTransform([distanceX, distanceY], ([x, y]) => {
     return Math.sqrt(x * x + y * y); // Euclidean distance formula
   });
 
   // Scale the icon container based on the distance
-  let widthTransform = useTransform(distance, [0, 150], [80, 40]);
-  let heightTransform = useTransform(distance, [0, 150], [80, 40]);
+  const widthTransform = useTransform(distance, [0, 150], [80, 40]);
+  const heightTransform = useTransform(distance, [0, 150], [80, 40]);
 
   // Scale the icon inside the container based on the distance
-  let widthTransformIcon = useTransform(distance, [0, 150], [40, 20]);
-  let heightTransformIcon = useTransform(distance, [0, 150], [40, 20]);
+  const widthTransformIcon = useTransform(distance, [0, 150], [40, 20]);
+  const heightTransformIcon = useTransform(distance, [0, 150], [40, 20]);
 
   // Apply spring animations for smooth transitions
-  let width = useSpring(widthTransform, {
+  const width = useSpring(widthTransform, {
     mass: 0.1,
     stiffness: 150,
     damping: 12,
   });
-  let height = useSpring(heightTransform, {
+  const height = useSpring(heightTransform, {
     mass: 0.1,
     stiffness: 150,
     damping: 12,
   });
 
-  let widthIcon = useSpring(widthTransformIcon, {
+  const widthIcon = useSpring(widthTransformIcon, {
     mass: 0.1,
     stiffness: 150,
     damping: 12,
   });
-  let heightIcon = useSpring(heightTransformIcon, {
+  const heightIcon = useSpring(heightTransformIcon, {
     mass: 0.1,
     stiffness: 150,
     damping: 12,
