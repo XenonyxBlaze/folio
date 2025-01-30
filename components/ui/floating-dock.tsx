@@ -111,9 +111,12 @@ function IconContainer({
   });
 
   // Combine x and y distances to calculate the Euclidean distance (distance from mouse to icon center)
-  const distance = useTransform([distanceX, distanceY], ([x, y]) => {
-    return Math.sqrt(x * x + y * y); // Euclidean distance formula
-  });
+  const distance = useTransform(
+    [distanceX, distanceY],
+    ([x, y]) => {
+      return Math.sqrt(Number(x) * Number(x) + Number(y) * Number(y)); // Euclidean distance formula
+    }
+  );
 
   // Scale the icon container based on the distance
   const widthTransform = useTransform(distance, [0, 150], [80, 40]);
