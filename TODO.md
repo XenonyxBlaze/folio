@@ -1,0 +1,5 @@
+- [ ] "Currently working on" section highlighting the current focus
+- [ ] Projects section with parallax scroll cards and tags
+- [ ] Personality section with staggered card reveal components
+- [ ] Socials section
+- [ ] Snake Queen game
