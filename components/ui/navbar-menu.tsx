@@ -1,12 +1,12 @@
 "use client";
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "framer-motion";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import Image from "next/image";
 
 const transition = {
-  type: "spring",
+  type: "spring" as const,
   mass: 0.5,
   damping: 11.5,
   stiffness: 100,
@@ -72,12 +72,12 @@ export const Menu = ({
 }) => {
   const { scrollYProgress } = useScroll();
   const [visible, setVisible] = useState(true);
- 
+
   useMotionValueEvent(scrollYProgress, "change", (current) => {
     // Check if current is not undefined and is a number
     if (typeof current === "number") {
       const direction = current! - scrollYProgress.getPrevious()!;
- 
+
       if (scrollYProgress.get() < 0.05) {
         setVisible(true);
       } else {
@@ -109,19 +109,19 @@ export const Menu = ({
         )}
       >
 
-    <nav
-      onMouseLeave={() => setActive(null)} // resets the state
-      className="relative rounded-b-full border-b-2 border-red-700 shadow-input flex justify-center space-x-6 px-16 py-6 items-center "
-      style={{
-        background: "rgba(150, 150, 150, 0.1)",
-        backdropFilter: "blur(4px)",
-        WebkitBackdropFilter: "blur(4px)",
+        <nav
+          onMouseLeave={() => setActive(null)} // resets the state
+          className="relative rounded-b-full border-b-2 border-red-700 shadow-input flex justify-center space-x-6 px-16 py-6 items-center "
+          style={{
+            background: "rgba(150, 150, 150, 0.1)",
+            backdropFilter: "blur(4px)",
+            WebkitBackdropFilter: "blur(4px)",
 
-      }}
-      >
-      {children}
-    </nav>
-    </motion.div></AnimatePresence>
+          }}
+        >
+          {children}
+        </nav>
+      </motion.div></AnimatePresence>
   );
 };
 
@@ -137,7 +137,7 @@ export const ProductItem = ({
   src: string;
 }) => {
   return (
-    <Link href={href} className="flex space-x-2 text-black dark:text-white hover:text-red-500"  target="_blank" rel="noopener noreferrer">
+    <Link href={href} className="flex space-x-2 text-black dark:text-white hover:text-red-500" target="_blank" rel="noopener noreferrer">
       <Image
         src={src}
         width={140}
