@@ -67,7 +67,7 @@ const Card = (
     }) => {
 
     
-    const cardStyle = "absolute z-[-2] w-[100%] h-[100%] bg-[size:100%_29px] bg-[linear-gradient(var(--red-200),var(--red-200)1px,var(--red-300)1px,var(--red-300)28px)] dark:bg-[linear-gradient(var(--red-800),var(--red-800)1px,var(--red-950)1px,var(--red-950)28px)] animate-cardAnim overflow-hidden rounded-lg opacity-[0.5]";
+    const cardStyle = "absolute z-[-2] w-[100%] h-[100%] bg-[size:100%_29px] bg-[linear-gradient(var(--red-300),var(--red-300)1px,var(--red-500)1px,var(--red-500)28px)] dark:bg-[linear-gradient(var(--red-800),var(--red-800)1px,var(--red-950)1px,var(--red-950)28px)] animate-cardAnim overflow-hidden rounded-lg opacity-[0.5]";
 
     return (
         <div className={cn("absolute w-[18%] aspect-[10/16] border-red-500 border rounded rounded-lg text-red-400 flex flex-col",posArg)}>

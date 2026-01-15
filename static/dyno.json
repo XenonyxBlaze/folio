@@ -1,29 +1,29 @@
 {
     "Status": {
-        "work":false,
-        "role":"Team Lead",
-        "company":"Data Science Club, VIT Bhopal",
-        "link":"https://www.linkedin.com/posts/aaravrajput_datascience-vitbhopai-vitbhopailions-activity-7062843531773526016-q6Bo",
-        "img":"/static/img/beggar.png"
+        "work": true,
+        "role": "Fullstack Developer",
+        "company": "Serve Smile Pvt Ltd",
+        "link": "https://www.linkedin.com/posts/aaravrajput_datascience-vitbhopai-vitbhopailions-activity-7062843531773526016-q6Bo",
+        "img": "/static/img/beggar.png"
     },
     "Projects": [
         {
-            "title":"Attack-ML",
-            "img":"/static/img/attack-ml.png",
-            "desc":"Intrusion Detection System using Machine Learning",
-            "link":"https://github.com/oatkrs/attack-ml"
+            "title": "Attack-ML",
+            "img": "/static/img/attack-ml.png",
+            "desc": "Intrusion Detection System using Machine Learning",
+            "link": "https://github.com/oatkrs/attack-ml"
         },
         {
-            "title":"Portfolio",
-            "img":"/static/img/portfolio.png",
-            "desc":"You are looking at it right now",
-            "link":"https://github.com/XenonyxBlaze/folio"
+            "title": "Portfolio",
+            "img": "/static/img/portfolio.png",
+            "desc": "You are looking at it right now",
+            "link": "https://github.com/XenonyxBlaze/folio"
         },
         {
-            "title":"GULAG",
-            "img":"/static/img/gulag.png",
-            "desc":"MySQL utility but ~GUI~",
-            "link":"https://github.com/XenonyxBlaze/GULAG_2.0"
+            "title": "GULAG",
+            "img": "/static/img/gulag.png",
+            "desc": "MySQL utility but ~GUI~",
+            "link": "https://github.com/XenonyxBlaze/GULAG_2.0"
         }
     ]
 }

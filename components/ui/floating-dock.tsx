@@ -19,7 +19,7 @@ export const FloatingDock = ({
 }) => {
   return (
     <>
-      <FloatingDockDesktop items={items} className={desktopClassName} />
+      <FloatingDockDesktop items={items} className={cn(desktopClassName,"text-red-800 dark:text-red-500")} />
     </>
   );
 };
